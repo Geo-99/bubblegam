@@ -17,7 +17,7 @@ merge_gd_df(
 
 \item{id_left}{The name of the column in the gdf that will be used to merge (character)}
 
-\item{df_right}{The dataframe (data.frame)}
+\item{df_right}{A dataframe (data.frame)}
 
 \item{id_right}{The name of the column in the df that will be used to merge (character)}
 
@@ -28,11 +28,6 @@ The merged geodataframe
 }
 \description{
 \code{merge_gd_df} merges a gdf and df with a left join and checks if/what data would be lost in the right df
-}
-\examples{
-
-spain_gdp <- merge_gd_df(spain, "Texto", gdp_1, "CCAA", c("PIB_Per_Capita_EURO", "PIB_anual_EURO"))
-
 }
 \author{
 Anna Bischof

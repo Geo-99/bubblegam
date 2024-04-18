@@ -2,8 +2,9 @@ Package: bubblegam
 Title: Geodata preprocessing, plotting & bubble animation
 Version: 0.0.0.9000
 Authors@R: 
+    c(
     person("Georg", "Starz", role = c("aut", "cre"), email = "georgstarz99@gmail.com"),
-    person("Anna", "Bischof", role = c("aut", "cre"), email = "anna.julia.bischof@gmail.com"),
+    person("Anna", "Bischof", role = "aut", email = "anna.julia.bischof@gmail.com"))
 Description: A package to efficiently merge (geo)dataframes, 
     identify, and move spatial outliers in geodata, and create 
     geographic plots, bubbleplots and the animation between these plots.
