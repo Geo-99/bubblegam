@@ -20,11 +20,11 @@
 #' @param legend_order The order of the legend items (character vector)
 #' @param legend_text The size of the legend text (numeric)
 #' @param adding_outline Should an outline of polygons be added (logical)
+#' @param adding_outline_borders Should an unionized outline of the polygons be added (logical)
 #' @param outline_gdf A sf object that either contains single polygons of the gdf or union of polygons
 #' @param outline_calculate_union To calculate the union of outline_gdf(logical). If TRUE when creating animation will be calculated new for each frame
 #' @param outline_color The color of the outline (character)
 #' @param outline_width The width of the outline (numeric)
-#' @param adding_outline_borders Calculates Union of outline_gdf (logical)
 #' @param outline_borders_color The color of the unionized outline (character)
 #' @param outline_borders_width The width of the unionized outline (numeric)
 #'
@@ -49,9 +49,9 @@ plot_discr_data <- function(gdf, column, plot_limits,
                             legend_rows = 1, legend_spacing = 0.4,
                             legend_order = names(fill_colors), legend_text = 15,
                             adding_outline = FALSE,
+                            adding_outline_borders = FALSE,
                             outline_gdf = NA,
                             outline_calculate_union = TRUE, outline_color = "darkgrey", outline_width = 0.5,
-                            adding_outline_borders = FALSE,
                             outline_borders_color ="darkgrey", outline_borders_width = 0.5) {
 
   gdf <- gdf %>%
