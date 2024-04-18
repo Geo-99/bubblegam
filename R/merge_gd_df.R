@@ -5,13 +5,10 @@
 #' @param gdf_left The geodataframe (sf data.frame)
 #' @param id_left The name of the column in the gdf that will be used to merge (character)
 #' @param df_right The dataframe (data.frame)
-#' @param id_right The name of the column in the df that will be used to merge (character)
-#' @param cols_to_keep The columns that should be kept in the merged gdf (character vector)
+#' @param id_right The name of the column in the df that will be used to merge (character) (default: id_left)
+#' @param cols_to_keep The columns that should be kept in the merged gdf (character vector) (default: "ALL")
 #'
 #' @return The merged geodataframe
-#' @examples
-#'
-#' spain_gdp <- merge_gd_df(spain, "Texto", gdp_1, "CCAA", c("PIB_Per_Capita_EURO", "PIB_anual_EURO"))
 #'
 #' @importFrom dplyr select setdiff
 #'
