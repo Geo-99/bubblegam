@@ -1,6 +1,6 @@
 #' Function to plot discrete data
 #'
-#' `plot_discr_data` plots a ggplot of a geodataframe and fills the polygons according to discrete data
+#' `plot_discr` plots a ggplot of a geodataframe and fills the polygons according to discrete data
 #'
 #' @param gdf A geodataframe (sf data.frame)
 #' @param column The name of the column in gdf that contains the data to be plotted (character)
@@ -44,7 +44,7 @@
 
 
 
-plot_discr_data <- function(gdf, column, plot_limits,
+plot_discr <- function(gdf, column, plot_limits,
                             title = "", title_size = 18, title_face = "bold.italic",
                             fill_colors = NA,
                             color_pal = rainbow,

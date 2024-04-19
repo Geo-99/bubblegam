@@ -1,6 +1,6 @@
 #' Function to plot continuous data
 #'
-#' `plot_cont_data` plots a ggplot of a geodataframe and fills the polygons according to continuous data
+#' `plot_cont` plots a ggplot of a geodataframe and fills the polygons according to continuous data
 #'
 #' @param gdf A geodataframe (sf data.frame)
 #' @param column The name of the column in gdf that contains the data to be plotted (character)
@@ -43,7 +43,7 @@
 
 
 
-plot_cont_data <- function(gdf, column, plot_limits,
+plot_cont <- function(gdf, column, plot_limits,
                            title = "", title_size = 18, title_face = "bold.italic",
                            fill_colorscale = c("lightblue", "darkblue"),
                            edge_color = NA, edge_width = 0.5,
