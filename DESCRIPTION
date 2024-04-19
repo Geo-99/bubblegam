@@ -12,5 +12,14 @@ URL: https://github.com/Geo-99/bubblegam
 BugReports: https://github.com/Geo-99/bubblegam/issues
 License: GPL (>= 3)
 Encoding: UTF-8
+Depends:
+    R (>= 3.5.0)
+Imports:
+    ggplot2,
+    animation,
+    dplyr,
+    sf,
+    lwgeom,
+    magick
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
