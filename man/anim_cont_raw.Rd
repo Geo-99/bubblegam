@@ -2,7 +2,7 @@
 % Please edit documentation in R/anim_cont_raw.R
 \name{anim_cont_raw}
 \alias{anim_cont_raw}
-\title{Function to create a raw animation for discrete data}
+\title{Function to create a raw animation for continuous data}
 \usage{
 anim_cont_raw(
   transition_df,

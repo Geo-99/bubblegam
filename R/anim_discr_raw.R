@@ -43,8 +43,6 @@
 #' @importFrom animation saveGIF
 #' @importFrom sf st_as_sf
 #'
-#' @importFrom bubblegam plot_discr
-#'
 #'
 #' @author Georg Starz, Anna Bischof
 #'
@@ -70,7 +68,7 @@ anim_discr_raw <- function(transition_df, path_file_name,
 
   datalist <- split(transition_df, transition_df$.frame)
   sf_datalist <- lapply(datalist, function(datalist) st_as_sf(datalist))
-  my_plots <- lapply(sf_datalist, plot_discr,
+  my_plots <- lapply(sf_datalist, bubblegam::plot_discr,
                      column, plot_limits,
                      title, title_size, title_face,
                      fill_colors,
