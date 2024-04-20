@@ -4,6 +4,8 @@ Welcome to *bubblegam*! An R package to efficiently merge (geo)dataframes, ident
 
 *Authors: [Georg Starz](http://students.eagle-science.org/students/students-2023/georg/) & [Anna Bischof](http://students.eagle-science.org/students/students-2023/anna/)*
 
+*Package Concept: [Anna Bischof](http://students.eagle-science.org/students/students-2023/anna/)* 
+
 &nbsp;
 
 ## Plot & animation examples
@@ -92,9 +94,12 @@ spain_limits_combined <- define_limits(data_start = spain_merged_moved, data_end
 ## Further notes & common problems
 
 ## Acknowledgements
-Idea:
-Martin
-EO Research Cluster DevLab
+The package is inspired by [zumbov2's](https://github.com/zumbov2/votemapswitzerland?tab=readme-ov-file#land-doesnt-vote-people-do) version of Karim Douïeb's famous vizualization [Land Doesn't Vote... People Do.](https://storymaps.arcgis.com/stories/0e636a652d44484b9457f953994b212b) 
+
+Thank you to [Dr. Martin Wegmann](https://eagle-science.org/lecturer/wegmann/) and the [Earth Observation Research Cluster's](https://earth-observation.org/) DevLab for the support and feedback during the development of the package. 
+
+This is a submission for the course *Introduction to Programming and Statistics for Remote Sensing and GIS* as part of the M.Sc. [EAGLE](https://eagle-science.org/) program at the University of Würzburg.
+
 ## Appendix
 ![switz_plot](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/e76f4809-c82b-4593-9137-67daf3f93b63)
 
