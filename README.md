@@ -32,7 +32,7 @@ library(bubblegam)
 
 ## Example workflow to demonstrate the different functions
 
-In this README we want to create this animation (based on a shapefile of the federal states of Spain and data on the GDP):
+Here we want to create this animation (based on a shapefile of the federal states of Spain and data on the GDP):
 
 &nbsp;
 
@@ -40,23 +40,61 @@ In this README we want to create this animation (based on a shapefile of the fed
 
 &nbsp;
 
+For a detailed description of all functions and their parameters, refer to the documentation, e.g. `?find_sim_change`.
 
-First, we load the source data which are automatically supplied with the installation:
+&nbsp;
+
+The source data is automatically supplied with the installation of the package.`spain_gdp` is a data.frame and spain_gpkg is a `sf data.frame`.
+We use the `find_sim_change` function to synchronize the names of the Spanish federal states for the subsequent merge function. For three features, these are written slightly differently in the two datasets:
 &nbsp;
 ```R
-library(sf)
-spain <- st_read()
-gdp <- read.csv(, sep = ";")
+gdp_cleaned <- find_sim_change(df_main = spain_gpkg, df_main_col = "Texto",
+                                df_change = spain_gdp, df_change_col = "CCAA")
+```
+
+Then, we merge both dataframes with `merge_gd_df`:
+&nbsp;
+```R
+spain_merged <- merge_gd_df(gdf_left = spain_gpkg, id_left = "Texto",
+                            df_right = gdp_cleaned, id_right = "CCAA",
+                            cols_to_keep = c("PIB_Per_Capita_EURO", "PIB_anual_EURO"))
 ```
 
 &nbsp;
 
-We use the `find_sim_change` function to synchronize the names of the Spanish federal states for the subsequent merge. For three features, these are written slightly differently in the two datasets:
+
+**Optional**: "Spatial outliers" in the geodata (in this case the Canary Islands) can complicate the map display. To automatically identify and then delete/define these outliers use `outlier_identify`:
+&nbsp;
+```R
+spain_merged_outliers <- outlier_identify(geodata = spain_merged, id_col = "Texto"))
+```
+
+If we defined the Canary Islands as an outlier, their multipolygon can be "moved closer" towards mainland Spain using `outlier_moving`:
+&nbsp;
+```R
+spain_merged_moved <- outlier_moving(geodata = spain_merged_outliers)
+```
+
+&nbsp;
+
+To create the bubble geodata use `create_bubbles`:
+&nbsp;
+```R
+spain_bubbles <- create_bubbles(merged_gdf = spain_merged_moved, col_name = "PIB_anual_EURO")
+```
+
+Defining the plot limit coordinates by referring to both geodataframes (map & bubbles) works with `define_limits` (important for consistent plot extent in animation):
+&nbsp;
+```R
+spain_limits_combined <- define_limits(data_start = spain_merged_moved, data_end = spain_bubbles)
+```
 
 ## Further notes & common problems
 
 ## Acknowledgements
-
+Idea:
+Martin
+EO Research Cluster DevLab
 ## Appendix
 ![switz_plot](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/e76f4809-c82b-4593-9137-67daf3f93b63)
 
