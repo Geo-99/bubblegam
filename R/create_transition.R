@@ -14,7 +14,7 @@
 #'
 #' @return A data.frame containing intermediary states of the transition
 #'
-#' @importFrom dplyr filter mutate rename arrange
+#' @importFrom dplyr filter mutate rename arrange ungroup
 #' @importFrom sf st_sf st_buffer st_centroid
 #' @importFrom ggplot2 ggplot geom_sf
 #'
