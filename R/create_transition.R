@@ -14,9 +14,9 @@
 #'
 #' @return A data.frame containing intermediary states of the transition
 #'
-#' @importFrom dplyr filter mutate rename arrange ungroup
-#' @importFrom sf st_sf st_buffer st_centroid
-#' @importFrom ggplot2 ggplot geom_sf
+#' @importFrom dplyr filter mutate rename arrange ungroup select group_by bind_rows
+#' @importFrom sf st_cast st_area
+#' @importFrom transformr tween_sf
 #'
 #'
 #' @author Georg Starz
