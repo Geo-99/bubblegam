@@ -50,11 +50,11 @@
 
 
 anim_cont_raw <- function(transition_df, path_file_name,
-                          anim_width = 500, anim_height = 500, anim_res = 500,
+                          anim_width = 1900, anim_height = 2000, anim_res = 400,
                           column = "v_plot1", plot_limits,
-                          title = "", title_size = 18, title_face = "bold.italic",
+                          title = "", title_size = 15, title_face = "bold.italic",
                           fill_colorscale = c("lightblue", "darkblue"),
-                          edge_color = NA, edge_width = 0.5,
+                          edge_color = NA, edge_width = 0.2,
                           na_values = FALSE, na_color = "grey", na_label = "No Data",
                           legend_limits = c(min(gdf$v_plot1, na.rm = TRUE), max(gdf$v_plot1, na.rm = TRUE)),
                           legend_breaks = c(min(legend_limits),
@@ -62,12 +62,12 @@ anim_cont_raw <- function(transition_df, path_file_name,
                                             (max(legend_limits)-min(legend_limits))*0.5 + min(legend_limits),
                                             (max(legend_limits)-min(legend_limits))*0.75 + min(legend_limits),
                                             max(legend_limits)),
-                          legend_accuracy = 1, legend_text = 15,
+                          legend_accuracy = 1, legend_text = 10,
                           adding_outline = FALSE,
                           adding_outline_borders = FALSE,
                           outline_gdf = NA,
-                          outline_calculate_union = TRUE, outline_color = "darkgrey", outline_width = 0.5,
-                          outline_borders_color = "darkgrey", outline_borders_width = 0.5) {
+                          outline_calculate_union = TRUE, outline_color = "darkgrey", outline_width = 0.2,
+                          outline_borders_color = "darkgrey", outline_borders_width = 0.2) {
 
   datalist <- split(transition_df, transition_df$.frame)
   sf_datalist <- lapply(datalist, function(datalist) st_as_sf(datalist))
