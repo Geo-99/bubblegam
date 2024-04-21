@@ -66,7 +66,7 @@ spain_merged <- merge_gd_df(gdf_left = spain_gpkg, id_left = "Texto",
 **Optional**: "Spatial outliers" in the geodata (in this case the Canary Islands) can complicate the map display. To automatically identify and then delete/define these outliers use `outlier_identify` and answer the prompts in the console (warnings may be displayed, which can be ignored):
 &nbsp;
 ```R
-spain_merged_outliers <- outlier_identify(geodata = spain_merged, id_col = "Texto"))
+spain_merged_outliers <- outlier_identify(geodata = spain_merged, id_col = "Texto")
 ```
 
 If the Canary Islands were defined as an outlier, their multipolygon can be "moved closer" towards mainland Spain using `outlier_moving`:
@@ -93,7 +93,7 @@ spain_limits_combined <- define_limits(data_start = spain_merged_moved, data_end
 Next, we can create our start and bubble plot with `plot_cont_data` (you can then save the plots using `ggsave()`):
 &nbsp;
 ```R
-spain_plot <-  plot_cont(gdf = spain_gdp_moved, column = "PIB_Per_Capita_EURO",     
+spain_plot <-  plot_cont(gdf = spain_merged_moved, column = "PIB_Per_Capita_EURO",     
                           plot_limits = spain_limits_combined,
                           fill_colorscale = c("lightyellow", "#f1434a","darkred"),
                           legend_limits = c(20000,40000),
@@ -119,7 +119,7 @@ bubbles_plot
 Now, to start the creation of the animation, we first need to calculate the transition steps between `spain_gdp_moved` and `spain_bubbles` by using `create_transition` (warnings may be displayed, which can be ignored):
 
 ```R
-spain_transition <- create_transition(gdf = spain_gdp_moved, bubble_gdf = spain_bubbles, 
+spain_transition <- create_transition(gdf = spain_merged_moved, bubble_gdf = spain_bubbles, 
                                       color_col = "PIB_Per_Capita_EURO", bubble_col = "PIB_anual_EURO")
 
 ```
