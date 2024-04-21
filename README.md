@@ -28,7 +28,7 @@ install_github("Geo-99/bubblegam")
 library(bubblegam)
 ```
 
-When testing the package we encountered some yet to be solved issues with two package dependencies. Therefore, for now, we recommend manually loading `library(animation` & `library(sf)`.
+When testing the package we encountered some yet to be solved issues with two package dependencies. Therefore, for now, we recommend manually loading `library(animation)` & `library(sf)`.
 
 &nbsp;
 
