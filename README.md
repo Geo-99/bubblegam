@@ -116,7 +116,7 @@ bubbles_plot
 
 &nbsp;
 
-Now, to start the creation of the animation, we first need to calculate the transition steps between `spain_gdp_moved` and `spain_bubbles` use `create_transition` (warnings may be displayed, which can be ignored):
+Now, to start the creation of the animation, we first need to calculate the transition steps between `spain_gdp_moved` and `spain_bubbles` by using `create_transition` (warnings may be displayed, which can be ignored):
 
 ```R
 spain_transition <- create_transition(gdf = spain_gdp_moved, bubble_gdf = spain_bubbles, 
@@ -174,11 +174,13 @@ image_write(animation_delayed, "path/to/anim_fps_delayed.gif")
 - We are happy if you find our bubblegam package useful! When using it, please link our repo (e.g., like so: *bubblegam R package, https://github.com/Geo-99/bubblegam*)
 - Feel free to send us plots and animations that you have created with bubblegam :)
 - We are sure there are many possible code improvements. We're looking forward to any suggestions you might have!
-- 
+- tbc
 
 &nbsp;
 
 ## Common problems
+- tbc
+- 
 
 &nbsp;
 
