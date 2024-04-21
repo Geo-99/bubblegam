@@ -85,7 +85,6 @@ spain_bubbles <- create_bubbles(merged_gdf = spain_merged_moved, col_name = "PIB
 
 We define the plot limit coordinates by referring to both geodataframes (map & bubbles) using `define_limits`. **Note:** This is done to ensure a consistent plot extent within the animation:
 
-&nbsp;
 ```R
 spain_limits_combined <- define_limits(data_start = spain_merged_moved, data_end = spain_bubbles)
 ```
@@ -112,6 +111,7 @@ bubbles_plot <- plot_cont_data(gdf = spain_bubbles, column = "PIB_Per_Capita_EUR
                               title_size = 24)
 
 ```
+Now, to start the creation of the animation, we first need to calculate the transition steps between `spain_gdp_moved` and `spain_bubbles`. For this we use `create_transition`:
 
 ```R
 spain_transition <- create_transition(gdf = spain_gdp_moved, bubble_gdf = spain_bubbles, 
