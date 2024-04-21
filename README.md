@@ -63,7 +63,7 @@ spain_merged <- merge_gd_df(gdf_left = spain_gpkg, id_left = "Texto",
 &nbsp;
 
 
-**Optional**: "Spatial outliers" in the geodata (in this case the Canary Islands) can complicate the map display. To automatically identify and then delete/define these outliers use `outlier_identify` and answer the prompts in the console:
+**Optional**: "Spatial outliers" in the geodata (in this case the Canary Islands) can complicate the map display. To automatically identify and then delete/define these outliers use `outlier_identify` and answer the prompts in the console (warnings may be displayed, which can be ignored):
 &nbsp;
 ```R
 spain_merged_outliers <- outlier_identify(geodata = spain_merged, id_col = "Texto"))
@@ -116,7 +116,7 @@ bubbles_plot
 
 &nbsp;
 
-Now, to start the creation of the animation, we first need to calculate the transition steps between `spain_gdp_moved` and `spain_bubbles` use `create_transition`:
+Now, to start the creation of the animation, we first need to calculate the transition steps between `spain_gdp_moved` and `spain_bubbles` use `create_transition` (warnings may be displayed, which can be ignored):
 
 ```R
 spain_transition <- create_transition(gdf = spain_gdp_moved, bubble_gdf = spain_bubbles, 
@@ -143,7 +143,7 @@ anim_finalize(anim_raw = "path/to/anim_raw.gif", anim_path_file = "path/to/anim_
 
 &nbsp;
 
-Creating the animation can be quite time-intensive depending on the input data. You can use the following code to create a higher-resolution animation (execute as a whole). However, in our experience, this takes even longer:
+Creating the animation can be quite time-intensive depending on the input data. As an alternative, you can use the following code to create a higher-resolution animation (execute as a whole). However, in our experience, this takes even longer:
 ```R
 library(magick)
 
@@ -162,11 +162,13 @@ out
 dev.off()
 
 animation <- image_animate(img, fps = 10)
-animation_delayed <- animation[c(rep(1, each = 50), 2:(length(datalist)-1), rep(length(datalist), each = 50))]
+animation_delayed <- animation[c(rep(1, each = 60), 2:(length(datalist)-1), rep(length(datalist), each = 60))]
 
 image_write(animation, "path/to/anim_fps.gif")
 image_write(animation_delayed, "path/to/anim_fps_delayed.gif")
 ```
+
+&nbsp;
 
 ## Further notes
 - We are happy if you find our bubblegam package useful! When using it, please link our repo (e.g., like so: *bubblegam R package, https://github.com/Geo-99/bubblegam*)
@@ -174,7 +176,11 @@ image_write(animation_delayed, "path/to/anim_fps_delayed.gif")
 - We are sure there are many possible code improvements. We're looking forward to any suggestions you might have!
 - 
 
+&nbsp;
+
 ## Common problems
+
+&nbsp;
 
 ## Acknowledgements
 This package is inspired by and partly based on [zumbov2's](https://github.com/zumbov2/votemapswitzerland?tab=readme-ov-file#land-doesnt-vote-people-do) version of Karim Douïeb's famous vizualization [Land Doesn't Vote... People Do.](https://storymaps.arcgis.com/stories/0e636a652d44484b9457f953994b212b) 
@@ -182,6 +188,8 @@ This package is inspired by and partly based on [zumbov2's](https://github.com/z
 We want to thank [Dr. Martin Wegmann](https://eagle-science.org/lecturer/wegmann/) and the [Earth Observation Research Cluster's](https://earth-observation.org/) DevLab for the support and feedback during the development of the package. 
 
 This is a submission for the course *Introduction to Programming and Statistics for Remote Sensing and GIS* as part of the M.Sc. [EAGLE](https://eagle-science.org/) program at the University of Würzburg.
+
+&nbsp;
 
 ## Appendix
 ![switz_plot](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/e76f4809-c82b-4593-9137-67daf3f93b63)
