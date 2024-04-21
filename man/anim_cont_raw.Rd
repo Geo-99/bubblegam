@@ -7,17 +7,17 @@
 anim_cont_raw(
   transition_df,
   path_file_name,
-  anim_width = 500,
-  anim_height = 500,
-  anim_res = 500,
+  anim_width = 1900,
+  anim_height = 2000,
+  anim_res = 400,
   column = "v_plot1",
   plot_limits,
   title = "",
-  title_size = 18,
+  title_size = 15,
   title_face = "bold.italic",
   fill_colorscale = c("lightblue", "darkblue"),
   edge_color = NA,
-  edge_width = 0.5,
+  edge_width = 0.2,
   na_values = FALSE,
   na_color = "grey",
   na_label = "No Data",
@@ -27,15 +27,15 @@ anim_cont_raw(
     min(legend_limits), (max(legend_limits) - min(legend_limits)) * 0.75 +
     min(legend_limits), max(legend_limits)),
   legend_accuracy = 1,
-  legend_text = 15,
+  legend_text = 10,
   adding_outline = FALSE,
   adding_outline_borders = FALSE,
   outline_gdf = NA,
   outline_calculate_union = TRUE,
   outline_color = "darkgrey",
-  outline_width = 0.5,
+  outline_width = 0.2,
   outline_borders_color = "darkgrey",
-  outline_borders_width = 0.5
+  outline_borders_width = 0.2
 )
 }
 \arguments{
