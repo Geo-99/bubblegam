@@ -1,4 +1,4 @@
-# bubblegam<img src="https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/4b5d4c31-5b31-4c36-b3a1-4df29c169861" align="right" alt="logo" width="200" height="185">
+# bubblegam<img src="https://github.com/Geo-99/bubblegam/assets/132048605/ca6a55d8-c76b-44ec-aae9-fe8b954a61b3" align="right" alt="logo" width="200" height="185">
 Welcome to *bubblegam*! An R package to efficiently merge (geo)dataframes, identify, and move "spatial outliers" in geodata, create geographic plots, bubbleplots and the animation between these plots.
 &nbsp;
 
@@ -7,15 +7,15 @@ Welcome to *bubblegam*! An R package to efficiently merge (geo)dataframes, ident
 &nbsp;
 
 ## Plot & animation examples
-![animation_green_delayed](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/a3911ea8-1b6e-4514-81d2-da1ee4fd5192)Data source: [Destatis](https://www.statistikportal.de/de/ugrdl/ergebnisse/energie)
+![animation_green_delayed](https://github.com/Geo-99/bubblegam/assets/132048605/30e8a96b-af66-42d3-a96e-f37d12e94918)Data source: [Destatis](https://www.statistikportal.de/de/ugrdl/ergebnisse/energie)
 
 &nbsp;
 
-![animation_footprint_delayed](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/6652867a-8030-4fc6-93a2-50ce741d5fa0)Data source: [EDGAR](https://edgar.jrc.ec.europa.eu/report_2023)
+![animation_footprint_delayed](https://github.com/Geo-99/bubblegam/assets/132048605/d5623da6-5f63-423f-b294-e0687ecbe2b1)Data source: [EDGAR](https://edgar.jrc.ec.europa.eu/report_2023)
 
 &nbsp;
 
-![animation_usa_outline_delayed](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/29e89c3f-2892-4029-9c0c-8d704a0cafa8)Data source: [STATSAMERICA](https://www.statsamerica.org/sip/rank_list.aspx?rank_label=pcpi1)
+![animation_usa_outline_delayed](https://github.com/Geo-99/bubblegam/assets/132048605/3aec18db-31de-4fc6-b510-9b032410a953)Data source: [STATSAMERICA](https://www.statsamerica.org/sip/rank_list.aspx?rank_label=pcpi1)
 
 &nbsp;
 
@@ -36,7 +36,7 @@ Here, we want to create this animation (based on a geopackage of the federal sta
 
 &nbsp;
 
-![animation_red_edge_delayed](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/b4e0d73d-344c-4295-8daf-99dd389d53d9)
+![animation_red_edge_delayed](https://github.com/Geo-99/bubblegam/assets/132048605/b0506db7-84f0-4943-8e81-e6d8b5207b17)
 
 &nbsp;
 
@@ -74,7 +74,7 @@ If the Canary Islands were defined as an outlier, their multipolygon can be "mov
 ```R
 spain_merged_moved <- outlier_moving(geodata = spain_merged_outliers)
 ```
-![Step2](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/06ee2f34-30ba-4bc7-b849-27e8c911c2c6)
+![Step2](https://github.com/Geo-99/bubblegam/assets/132048605/18f219b7-a93c-4ff1-acd6-8a777dddc119)
 
 &nbsp;
 
@@ -194,28 +194,28 @@ This is a submission for the course *Introduction to Programming and Statistics 
 &nbsp;
 
 ## Appendix
-![switz_plot](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/e76f4809-c82b-4593-9137-67daf3f93b63)
+![switz_plot](https://github.com/Geo-99/bubblegam/assets/132048605/8d062cde-e032-4acb-a664-83b54c19b496)
 
 &nbsp;
 
-![switz_bubbles_plot](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/4c1d35da-2be2-4644-83da-7ddedcd5811b)
+![switz_bubbles_plot](https://github.com/Geo-99/bubblegam/assets/132048605/6d4ffdbb-98a5-4699-bac4-6d71850ca7d1)
 
 &nbsp;
 
-![animation_cantons](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/dd92362f-8f1c-447d-a070-c766d3f8bccd)
+![animation_cantons](https://github.com/Geo-99/bubblegam/assets/132048605/96445abb-eb6f-43af-991a-67d7362e294b)
 
 &nbsp;
 
-![animation_cantons_smaller_outline](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/51838687-218f-405e-b73c-b0b5a7f4ca4e)
+![animation_cantons_smaller_outline](https://github.com/Geo-99/bubblegam/assets/132048605/4eca6832-b319-4908-8c18-00679ed199c8)
 
 &nbsp;
 
-![animation_NEW_delayed](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/64b4e319-a5c4-44b6-8ffb-25c4312ae735)
+![animation_NEW_delayed](https://github.com/Geo-99/bubblegam/assets/132048605/7ed2338e-d14c-434f-9b68-3ea45e7db72f)
 
 &nbsp;
 
-![Spain_red_bubbles_borders](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/fc804562-bc3a-4206-8969-57e12f8606fd)
+![Spain_red_bubbles_borders](https://github.com/Geo-99/bubblegam/assets/132048605/c319df04-dc7b-4631-9a39-8f9ec001871d)
 
 &nbsp;
 
-![plot_UNFCC](https://github.com/Geo-99/geospatial_circles_anim/assets/132048605/5aad0da4-b9e0-4617-bff4-202e7fb6d590)
+![plot_UNFCC](https://github.com/Geo-99/bubblegam/assets/132048605/22d87ede-5c80-417d-a1de-89ba1c36667a)
