@@ -28,6 +28,8 @@ install_github("Geo-99/bubblegam")
 library(bubblegam)
 ```
 
+When testing the package we encountered some yet to be solved issues with two package dependencies. Therefore, for now, we recommend manually loading `library(animation` & `library(sf)`.
+
 &nbsp;
 
 ## Example workflow to demonstrate the different functions
@@ -90,7 +92,7 @@ We define the plot limit coordinates by referring to both geodataframes (map & b
 spain_limits_combined <- define_limits(data_start = spain_merged_moved, data_end = spain_bubbles)
 ```
 
-Next, we can create our start and bubble plot with `plot_cont_data` (you can then save the plots using `ggsave()`):
+Next, we can create our start and bubble plot with `plot_cont` (you can then save the plots using `ggsave()`):
 &nbsp;
 ```R
 spain_plot <-  plot_cont(gdf = spain_merged_moved, column = "PIB_Per_Capita_EURO",     
@@ -123,7 +125,7 @@ spain_transition <- create_transition(gdf = spain_merged_moved, bubble_gdf = spa
                                       color_col = "PIB_Per_Capita_EURO", bubble_col = "PIB_anual_EURO")
 
 ```
-`anim_cont_raw` is used to create the raw animation (slow sequence of all frames) and save it. **Note:** all parameters from plot_limits onwards are based on `plot_cont_data`:
+`anim_cont_raw` is used to create the raw animation (slow sequence of all frames) and save it. **Note:** all parameters from plot_limits onwards are based on `plot_cont`:
 ```R
 anim_cont_raw(transition_df = spain_transition, path_file_name = "path/to/anim_raw.gif",
               anim_width = 1900, anim_height = 2000, anim_res = 400,
@@ -174,18 +176,22 @@ image_write(animation_delayed, "path/to/anim_fps_delayed.gif")
 - We are happy if you find our bubblegam package useful! When using it, please link our repo (e.g., like so: *bubblegam R package, https://github.com/Geo-99/bubblegam*)
 - Feel free to send us plots and animations that you have created with bubblegam :)
 - We are sure there are many possible code improvements. We're looking forward to any suggestions you might have!
-- tbc
+- 4 bubblegam functions weren't shown in the Spain GDP example:
+    - `merge_df_df` enables inner merge of dataframes similar to `merge_gd_df`
+    - `outlier_restructure` reincludes moved outlier subfeatures
+    - `plot_discr`: same as `plot_cont` but for discrete data
+    - `anim_discr_raw`: same as `anim_cont_raw` but for discrete data
 
 &nbsp;
 
 ## Common problems
-- tbc
-- 
+- If your geodata uses a geographic and not a projected CRS, the bubbles can turn into ellipses in the plots/animations. Therefore, we recommend reprojecting it beforehand using `st_transform()`.![animation](https://github.com/Geo-99/bubblegam/assets/132048605/348036ea-4250-477c-83ea-d2656750ba26)
+- To be continued ...
 
 &nbsp;
 
 ## Acknowledgements
-This package is inspired by and partly based on [zumbov2's](https://github.com/zumbov2/votemapswitzerland?tab=readme-ov-file#land-doesnt-vote-people-do) version of Karim Douïeb's famous vizualization [Land Doesn't Vote... People Do.](https://storymaps.arcgis.com/stories/0e636a652d44484b9457f953994b212b) 
+This package is inspired by and partly based on [zumbov2's](https://github.com/zumbov2/votemapswitzerland?tab=readme-ov-file#land-doesnt-vote-people-do) Switzerland version of Karim Douïeb's famous vizualization [Land Doesn't Vote... People Do.](https://storymaps.arcgis.com/stories/0e636a652d44484b9457f953994b212b) 
 
 We want to thank [Dr. Martin Wegmann](https://eagle-science.org/lecturer/wegmann/) and the [Earth Observation Research Cluster's](https://earth-observation.org/) DevLab for the support and feedback during the development of the package. 
 
