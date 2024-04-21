@@ -21,7 +21,8 @@ Imports:
     sf,
     lwgeom,
     magick,
-    transformr
+    transformr,
+    magrittr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 LazyData: true
