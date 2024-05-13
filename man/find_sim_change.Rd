@@ -23,6 +23,8 @@ find_sim_change(
 \item{df_change_col}{The name of the column in df_change that is used to compare similar values (character)}
 
 \item{sim}{Can be "sim", "jc" (Jaccard Similarity), or "jw" (Jaro Winkler Similarity) (character vector)}
+
+\item{thresh}{Threshold for similarity measure (numeric)}
 }
 \value{
 Updated df_change dataframe.

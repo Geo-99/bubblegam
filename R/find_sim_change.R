@@ -9,6 +9,7 @@
 #' @param df_change A dataframe (data.frame). This df will be changed.
 #' @param df_change_col The name of the column in df_change that is used to compare similar values (character)
 #' @param sim Can be "sim", "jc" (Jaccard Similarity), or "jw" (Jaro Winkler Similarity) (character vector)
+#' @param thresh Threshold for similarity measure (numeric)
 #'
 #' @return Updated df_change dataframe.
 #'
