@@ -4,6 +4,8 @@ Welcome to *bubblegam*! An R package to efficiently merge (geo)dataframes, ident
 
 *Authors: [Georg Starz](http://students.eagle-science.org/students/students-2023/georg/) (Code) & [Anna Bischof](http://students.eagle-science.org/students/students-2023/anna/) (Code, Package Idea)*
 
+*Contact: georg.starz@stud-mail.uni-wuerzburg.de & anna.bischof@stud-mail.uni-wuerzburg.de*
+
 &nbsp;
 
 ## Plot & animation examples
@@ -20,7 +22,7 @@ Welcome to *bubblegam*! An R package to efficiently merge (geo)dataframes, ident
 &nbsp;
 
 ## Installation
-To install and load bubblegam, enter these commands in your R console:
+The package was developed with R version 4.3.1 on Windows. Mac & Linux haven't been tested so far. To install and load bubblegam, enter these commands in your R console:
 &nbsp;
 ```R
 library(devtools)
