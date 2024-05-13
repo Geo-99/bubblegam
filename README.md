@@ -1,5 +1,5 @@
 # bubblegam<img src="https://github.com/Geo-99/bubblegam/assets/132048605/ca6a55d8-c76b-44ec-aae9-fe8b954a61b3" align="right" alt="logo" width="200" height="185">
-Welcome to *bubblegam*! An R package to efficiently merge (geo)dataframes, identify, and move "spatial outliers" in geodata, create geographic plots, bubbleplots and the animation between these plots.
+Welcome to *bubblegam*! An R package to efficiently merge (geo)dataframes, identify, and move "spatial outliers" in geodata, create geographic plots, bubbleplots, and the animation between these plots.
 &nbsp;
 
 *Authors: [Georg Starz](http://students.eagle-science.org/students/students-2023/georg/) (Code) & [Anna Bischof](http://students.eagle-science.org/students/students-2023/anna/) (Code, Package Idea)*
