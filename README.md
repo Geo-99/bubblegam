@@ -186,6 +186,23 @@ image_write(animation_delayed, "path/to/anim_fps_delayed.gif")
 
 &nbsp;
 
+## Current Developments 
+We are currently working on extending the functionality of bubblegam. Below you can find a list on what we are working on.
+- Function to create an animation between different plots or images. The aim is to facilitate the morph transition between the plots.
+![function_anim_transp_small](https://github.com/Geo-99/bubblegam/assets/75265407/7da68cec-44b0-4921-afdd-2c06223c4552)
+
+&nbsp;
+
+- Option to create a cartogram animation.
+![anim_raw_largestpartFALSE_FINAL2](https://github.com/Geo-99/bubblegam/assets/75265407/357eb383-95bf-4a7a-a21d-d38e55b1db65)
+
+&nbsp;
+
+- Option to create a time series animation based on multiple bubble plots over time.
+![africa_1980_2021_3_FINAL gif](https://github.com/Geo-99/bubblegam/assets/75265407/f897ad4f-0a5a-4c91-af97-3371b85cf47f)
+
+&nbsp;
+
 ## Common problems
 - If your geodata uses a geographic and not a projected CRS, the bubbles can turn into ellipses in the plots/animations. Therefore, we recommend reprojecting it beforehand using `st_transform()`.![animation](https://github.com/Geo-99/bubblegam/assets/132048605/348036ea-4250-477c-83ea-d2656750ba26)
 - To be continued ...
