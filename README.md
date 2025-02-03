@@ -60,8 +60,7 @@ Then, we merge both dataframes with `merge_gd_df`:
 &nbsp;
 ```R
 spain_merged <- merge_gd_df(gdf_left = spain_gpkg, id_left = "Texto",
-                            df_right = gdp_cleaned, id_right = "CCAA",
-                            cols_to_keep = c("PIB_Per_Capita_EURO", "PIB_anual_EURO"))
+                            df_right = gdp_cleaned, id_right = "CCAA")
 ```
 
 &nbsp;
